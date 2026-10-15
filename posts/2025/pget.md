@@ -31,7 +31,7 @@ Usage: pget [options] URL
 
 **下载：**
 - 原版（无代理功能）：https://github.com/Code-Hex/pget
-- 有代理功能的版本：https://github.com/rustyllh/pget ，其他版本请自行编译
+- 有代理功能的版本：https://github.com/longafterx/pget ，其他版本请自行编译
 
 ## 设计
 

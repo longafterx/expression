@@ -18,10 +18,10 @@ export default defineConfig({
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts(pageSize),
-        website: 'https://github.com/rustyllh', //copyright link
+        website: 'https://github.com/longafterx', //copyright link
         // 评论的仓库地址 https://giscus.app/ 请按照这个官方初始化后覆盖
         comment: {
-            repo: 'rustyllh/expression',
+            repo: 'longafterx/expression',
             repoId: 'R_kgDONQJ6eg',
             categoryId: 'DIC_kwDONQJ6es4CpwYH'
         },
@@ -41,7 +41,7 @@ export default defineConfig({
         outline: {
             label: '目录'
         },
-        socialLinks: [{ icon: 'github', link: 'https://github.com/rustyllh/expression' }]
+        socialLinks: [{ icon: 'github', link: 'https://github.com/longafterx/expression' }]
     } as any,
 
     srcExclude: isProd
