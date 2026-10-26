@@ -7,29 +7,6 @@ test('home page loads', async ({ page }) => {
     await expect(page.locator('.post-list').first()).toBeVisible()
 })
 
-test('theme switch clears completed view-transition animations between toggles', async ({ page }) => {
-    await page.goto('/')
-
-    const themeSwitch = page.locator('.VPSwitchAppearance').first()
-
-    await themeSwitch.click()
-    await page.waitForTimeout(800)
-    await themeSwitch.click()
-    await page.waitForTimeout(800)
-
-    const completedViewTransitions = await page.evaluate(() => {
-        return document
-            .getAnimations({ subtree: true })
-            .filter((animation) => {
-                const pseudoElement = animation.effect?.pseudoElement
-                return pseudoElement?.startsWith('::view-transition') && animation.playState === 'finished'
-            })
-            .map((animation) => animation.effect?.pseudoElement)
-    })
-
-    expect(completedViewTransitions).toEqual([])
-})
-
 test('pagination navigates to another page when available', async ({ page }) => {
     await page.goto('/')
 

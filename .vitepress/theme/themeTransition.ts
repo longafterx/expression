@@ -10,16 +10,14 @@ interface Viewport {
     height: number
 }
 
-export function getThemeTransitionCircle(rect: Rect, viewport: Viewport, devicePixelRatio: number) {
-    const scale = Math.max(devicePixelRatio, 1)
-    const x = (rect.left + rect.width / 2) * scale
-    const y = (rect.top + rect.height / 2) * scale
-    const width = viewport.width * scale
-    const height = viewport.height * scale
+export function getThemeTransitionCircle(rect: Rect, viewport: Viewport) {
+    // DOM bounds and clip-path both use CSS pixels, regardless of screen density or zoom.
+    const x = rect.left + rect.width / 2
+    const y = rect.top + rect.height / 2
 
     return {
         x,
         y,
-        endRadius: Math.hypot(Math.max(x, width - x), Math.max(y, height - y))
+        endRadius: Math.hypot(Math.max(x, viewport.width - x), Math.max(y, viewport.height - y))
     }
 }
