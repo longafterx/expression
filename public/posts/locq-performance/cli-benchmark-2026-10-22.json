@@ -1,0 +1,482 @@
+{
+    "title": "locq CLI benchmark archive, 2026-10-22",
+    "archived_on": "2026-10-26",
+    "provenance": {
+        "source_directory": "locq/benchmark-results/readme-locq-20261022-173633",
+        "source_files": ["environment.txt", "report.md", "raw.txt", "summary.json", "measure.zsh"],
+        "raw_txt_sha256": "3e366a5c845848af4e16d3fbe248c57972e05407fd716c973d3cf44511dfefbb",
+        "note": "Selected locq, tokei and upstream gocloc samples from the original local report. No new measurements were run for this article. cloc samples are omitted from this archive because they are not used in the article."
+    },
+    "environment": {
+        "cpu": "Apple M3",
+        "logical_cpus": 8,
+        "physical_cpus": 8,
+        "memory_gib": 16,
+        "os": "macOS 27.0.1 arm64",
+        "go": "go1.27.3 darwin/arm64"
+    },
+    "sources": {
+        "locq": {
+            "repository": "https://github.com/longafterx/locq",
+            "commit": "98ad5d9c0de9622a678ae6dd71e1912e4e134ddf",
+            "clean_at_build_time": true
+        },
+        "gocloc": {
+            "repository": "https://github.com/hhatto/gocloc",
+            "commit": "679b457182dcf852d90e52f132403d6b7de0e33d"
+        },
+        "tokei": {
+            "repository": "https://github.com/XAMPPRocky/tokei",
+            "version": "15.0.0",
+            "serialization_support": "json"
+        },
+        "target": {
+            "repository": "https://github.com/golang/go",
+            "commit": "6b3800e1dd90925b4184acd6391f68bffd16b6a5",
+            "clean_before_and_after": true
+        }
+    },
+    "method": {
+        "command_arguments": ["."],
+        "tool_options": "defaults",
+        "runtime_or_thread_overrides": false,
+        "warmups_per_tool": 1,
+        "fast_tool_order": "alternating",
+        "timed_stdout": "/dev/null",
+        "all_samples_retained": true,
+        "background_desktop_tasks_active": true,
+        "cache": "warm-up performed; no controlled cold-cache experiment",
+        "counts_and_file_sets": "tool defaults; not aligned"
+    },
+    "summary": {
+        "locq": {
+            "count": 30,
+            "mean_seconds": 0.24903333333333333,
+            "median_seconds": 0.2255,
+            "min_seconds": 0.197,
+            "max_seconds": 0.402
+        },
+        "tokei": {
+            "count": 10,
+            "mean_seconds": 0.2474,
+            "median_seconds": 0.239,
+            "min_seconds": 0.198,
+            "max_seconds": 0.341
+        },
+        "gocloc": {
+            "count": 10,
+            "mean_seconds": 1.4566999999999999,
+            "median_seconds": 1.426,
+            "min_seconds": 1.242,
+            "max_seconds": 1.838
+        }
+    },
+    "samples": {
+        "locq": [
+            {
+                "batch": 1,
+                "iteration": 1,
+                "user_seconds": 0.312,
+                "system_seconds": 0.877,
+                "cpu_percent": 578.0,
+                "elapsed_seconds": 0.206
+            },
+            {
+                "batch": 1,
+                "iteration": 2,
+                "user_seconds": 0.318,
+                "system_seconds": 0.871,
+                "cpu_percent": 583.0,
+                "elapsed_seconds": 0.204
+            },
+            {
+                "batch": 1,
+                "iteration": 3,
+                "user_seconds": 0.316,
+                "system_seconds": 0.872,
+                "cpu_percent": 581.0,
+                "elapsed_seconds": 0.204
+            },
+            {
+                "batch": 1,
+                "iteration": 4,
+                "user_seconds": 0.319,
+                "system_seconds": 0.892,
+                "cpu_percent": 596.0,
+                "elapsed_seconds": 0.203
+            },
+            {
+                "batch": 1,
+                "iteration": 5,
+                "user_seconds": 0.309,
+                "system_seconds": 0.797,
+                "cpu_percent": 532.0,
+                "elapsed_seconds": 0.208
+            },
+            {
+                "batch": 1,
+                "iteration": 6,
+                "user_seconds": 0.317,
+                "system_seconds": 0.84,
+                "cpu_percent": 568.0,
+                "elapsed_seconds": 0.204
+            },
+            {
+                "batch": 1,
+                "iteration": 7,
+                "user_seconds": 0.325,
+                "system_seconds": 1.505,
+                "cpu_percent": 531.0,
+                "elapsed_seconds": 0.344
+            },
+            {
+                "batch": 1,
+                "iteration": 8,
+                "user_seconds": 0.311,
+                "system_seconds": 0.886,
+                "cpu_percent": 525.0,
+                "elapsed_seconds": 0.228
+            },
+            {
+                "batch": 1,
+                "iteration": 9,
+                "user_seconds": 0.323,
+                "system_seconds": 1.261,
+                "cpu_percent": 489.0,
+                "elapsed_seconds": 0.324
+            },
+            {
+                "batch": 1,
+                "iteration": 10,
+                "user_seconds": 0.319,
+                "system_seconds": 0.891,
+                "cpu_percent": 601.0,
+                "elapsed_seconds": 0.201
+            },
+            {
+                "batch": 2,
+                "iteration": 11,
+                "user_seconds": 0.316,
+                "system_seconds": 0.852,
+                "cpu_percent": 552.0,
+                "elapsed_seconds": 0.211
+            },
+            {
+                "batch": 2,
+                "iteration": 12,
+                "user_seconds": 0.306,
+                "system_seconds": 0.834,
+                "cpu_percent": 533.0,
+                "elapsed_seconds": 0.214
+            },
+            {
+                "batch": 2,
+                "iteration": 13,
+                "user_seconds": 0.318,
+                "system_seconds": 0.887,
+                "cpu_percent": 612.0,
+                "elapsed_seconds": 0.197
+            },
+            {
+                "batch": 2,
+                "iteration": 14,
+                "user_seconds": 0.318,
+                "system_seconds": 1.249,
+                "cpu_percent": 589.0,
+                "elapsed_seconds": 0.266
+            },
+            {
+                "batch": 2,
+                "iteration": 15,
+                "user_seconds": 0.321,
+                "system_seconds": 1.335,
+                "cpu_percent": 612.0,
+                "elapsed_seconds": 0.27
+            },
+            {
+                "batch": 2,
+                "iteration": 16,
+                "user_seconds": 0.317,
+                "system_seconds": 0.846,
+                "cpu_percent": 447.0,
+                "elapsed_seconds": 0.26
+            },
+            {
+                "batch": 2,
+                "iteration": 17,
+                "user_seconds": 0.318,
+                "system_seconds": 0.842,
+                "cpu_percent": 496.0,
+                "elapsed_seconds": 0.234
+            },
+            {
+                "batch": 2,
+                "iteration": 18,
+                "user_seconds": 0.312,
+                "system_seconds": 0.714,
+                "cpu_percent": 393.0,
+                "elapsed_seconds": 0.26
+            },
+            {
+                "batch": 2,
+                "iteration": 19,
+                "user_seconds": 0.316,
+                "system_seconds": 0.803,
+                "cpu_percent": 417.0,
+                "elapsed_seconds": 0.268
+            },
+            {
+                "batch": 2,
+                "iteration": 20,
+                "user_seconds": 0.333,
+                "system_seconds": 0.802,
+                "cpu_percent": 282.0,
+                "elapsed_seconds": 0.402
+            },
+            {
+                "batch": 3,
+                "iteration": 21,
+                "user_seconds": 0.331,
+                "system_seconds": 0.841,
+                "cpu_percent": 483.0,
+                "elapsed_seconds": 0.242
+            },
+            {
+                "batch": 3,
+                "iteration": 22,
+                "user_seconds": 0.3,
+                "system_seconds": 0.788,
+                "cpu_percent": 523.0,
+                "elapsed_seconds": 0.208
+            },
+            {
+                "batch": 3,
+                "iteration": 23,
+                "user_seconds": 0.31,
+                "system_seconds": 0.819,
+                "cpu_percent": 573.0,
+                "elapsed_seconds": 0.197
+            },
+            {
+                "batch": 3,
+                "iteration": 24,
+                "user_seconds": 0.308,
+                "system_seconds": 1.013,
+                "cpu_percent": 423.0,
+                "elapsed_seconds": 0.312
+            },
+            {
+                "batch": 3,
+                "iteration": 25,
+                "user_seconds": 0.323,
+                "system_seconds": 1.07,
+                "cpu_percent": 513.0,
+                "elapsed_seconds": 0.271
+            },
+            {
+                "batch": 3,
+                "iteration": 26,
+                "user_seconds": 0.318,
+                "system_seconds": 1.397,
+                "cpu_percent": 514.0,
+                "elapsed_seconds": 0.333
+            },
+            {
+                "batch": 3,
+                "iteration": 27,
+                "user_seconds": 0.323,
+                "system_seconds": 1.245,
+                "cpu_percent": 428.0,
+                "elapsed_seconds": 0.366
+            },
+            {
+                "batch": 3,
+                "iteration": 28,
+                "user_seconds": 0.325,
+                "system_seconds": 0.845,
+                "cpu_percent": 523.0,
+                "elapsed_seconds": 0.223
+            },
+            {
+                "batch": 3,
+                "iteration": 29,
+                "user_seconds": 0.3,
+                "system_seconds": 0.808,
+                "cpu_percent": 532.0,
+                "elapsed_seconds": 0.208
+            },
+            {
+                "batch": 3,
+                "iteration": 30,
+                "user_seconds": 0.294,
+                "system_seconds": 0.698,
+                "cpu_percent": 489.0,
+                "elapsed_seconds": 0.203
+            }
+        ],
+        "tokei": [
+            {
+                "batch": 1,
+                "iteration": 3,
+                "user_seconds": 0.582,
+                "system_seconds": 0.747,
+                "cpu_percent": 671.0,
+                "elapsed_seconds": 0.198
+            },
+            {
+                "batch": 1,
+                "iteration": 6,
+                "user_seconds": 0.571,
+                "system_seconds": 0.719,
+                "cpu_percent": 578.0,
+                "elapsed_seconds": 0.223
+            },
+            {
+                "batch": 1,
+                "iteration": 9,
+                "user_seconds": 0.574,
+                "system_seconds": 0.861,
+                "cpu_percent": 527.0,
+                "elapsed_seconds": 0.272
+            },
+            {
+                "batch": 2,
+                "iteration": 12,
+                "user_seconds": 0.563,
+                "system_seconds": 0.699,
+                "cpu_percent": 548.0,
+                "elapsed_seconds": 0.23
+            },
+            {
+                "batch": 2,
+                "iteration": 15,
+                "user_seconds": 0.568,
+                "system_seconds": 0.716,
+                "cpu_percent": 596.0,
+                "elapsed_seconds": 0.215
+            },
+            {
+                "batch": 2,
+                "iteration": 18,
+                "user_seconds": 0.563,
+                "system_seconds": 0.685,
+                "cpu_percent": 435.0,
+                "elapsed_seconds": 0.286
+            },
+            {
+                "batch": 3,
+                "iteration": 21,
+                "user_seconds": 0.574,
+                "system_seconds": 0.703,
+                "cpu_percent": 496.0,
+                "elapsed_seconds": 0.257
+            },
+            {
+                "batch": 3,
+                "iteration": 24,
+                "user_seconds": 0.556,
+                "system_seconds": 0.876,
+                "cpu_percent": 576.0,
+                "elapsed_seconds": 0.248
+            },
+            {
+                "batch": 3,
+                "iteration": 27,
+                "user_seconds": 0.571,
+                "system_seconds": 1.06,
+                "cpu_percent": 478.0,
+                "elapsed_seconds": 0.341
+            },
+            {
+                "batch": 3,
+                "iteration": 30,
+                "user_seconds": 0.566,
+                "system_seconds": 0.748,
+                "cpu_percent": 642.0,
+                "elapsed_seconds": 0.204
+            }
+        ],
+        "gocloc": [
+            {
+                "batch": 1,
+                "iteration": 3,
+                "user_seconds": 0.601,
+                "system_seconds": 0.767,
+                "cpu_percent": 110.0,
+                "elapsed_seconds": 1.242
+            },
+            {
+                "batch": 1,
+                "iteration": 6,
+                "user_seconds": 0.606,
+                "system_seconds": 0.842,
+                "cpu_percent": 99.0,
+                "elapsed_seconds": 1.456
+            },
+            {
+                "batch": 1,
+                "iteration": 9,
+                "user_seconds": 0.608,
+                "system_seconds": 0.823,
+                "cpu_percent": 108.0,
+                "elapsed_seconds": 1.315
+            },
+            {
+                "batch": 2,
+                "iteration": 12,
+                "user_seconds": 0.615,
+                "system_seconds": 0.916,
+                "cpu_percent": 101.0,
+                "elapsed_seconds": 1.509
+            },
+            {
+                "batch": 2,
+                "iteration": 15,
+                "user_seconds": 0.611,
+                "system_seconds": 0.9,
+                "cpu_percent": 109.0,
+                "elapsed_seconds": 1.382
+            },
+            {
+                "batch": 2,
+                "iteration": 18,
+                "user_seconds": 0.631,
+                "system_seconds": 0.952,
+                "cpu_percent": 102.0,
+                "elapsed_seconds": 1.549
+            },
+            {
+                "batch": 3,
+                "iteration": 21,
+                "user_seconds": 0.638,
+                "system_seconds": 0.903,
+                "cpu_percent": 103.0,
+                "elapsed_seconds": 1.488
+            },
+            {
+                "batch": 3,
+                "iteration": 24,
+                "user_seconds": 0.603,
+                "system_seconds": 0.85,
+                "cpu_percent": 104.0,
+                "elapsed_seconds": 1.392
+            },
+            {
+                "batch": 3,
+                "iteration": 27,
+                "user_seconds": 0.671,
+                "system_seconds": 0.976,
+                "cpu_percent": 89.0,
+                "elapsed_seconds": 1.838
+            },
+            {
+                "batch": 3,
+                "iteration": 30,
+                "user_seconds": 0.608,
+                "system_seconds": 0.845,
+                "cpu_percent": 104.0,
+                "elapsed_seconds": 1.396
+            }
+        ]
+    }
+}
